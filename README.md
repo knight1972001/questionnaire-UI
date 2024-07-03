@@ -1,46 +1,46 @@
-# Getting Started with Create React App
+# Questionnaire App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Prerequisite
 
-## Available Scripts
+To run this application, you need to have the server running from the following repository:
+[Questionnaire Server](https://github.com/knight1972001/questionnaire-server)
 
-In the project directory, you can run:
+API Port: 8000
 
-### `npm start`
+## Demo
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+### Picture 1: Question and Progress Bar
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+![Question and Progress Bar](path/to/picture1.png)
 
-### `npm test`
+### Picture 2: Unable to Save or Proceed without Completing Current Question
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+![Unable to Save or Proceed](path/to/picture2.png)
 
-### `npm run build`
+### Picture 3: Navigating Back to Previous Questions with Saved Answers
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+![Navigating Back](path/to/picture3.png)
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### Picture 4: Checkbox Question
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+![Checkbox Question](path/to/picture4.png)
 
-### `npm run eject`
+### Picture 5: Radio Button Question
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+![Radio Button Question](path/to/picture5.png)
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### Picture 6: Text Question
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
+![Text Question](path/to/picture6.png)
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+### Picture 7: Matching Question
 
-## Learn More
+![Matching Question](path/to/picture7.png)
 
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
+### Picture 8: Ranking Question
 
-To learn React, check out the [React documentation](https://reactjs.org/).
+![Ranking Question](path/to/picture8.png)
+
+### Picture 9: Showing Points at the End
+
+![Points Summary](path/to/picture9.png)
