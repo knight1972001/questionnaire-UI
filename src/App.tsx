@@ -43,7 +43,7 @@ function App() {
 
   // Dropdown matching state
   const [dropdownMatching, setDropdownMatching] = useState<{
-    [key: number]: { left: string; right: string };
+    [key: number]: string;
   }>({});
 
   interface QuestionProps {
@@ -244,6 +244,8 @@ function App() {
   };
 
   const handleDropdownMatchingChange = (leftValue: any, rightValue: any) => {
+    console.log(leftValue + " | " + rightValue);
+
     setDropdownMatching((prevState) => ({
       ...prevState,
       [leftValue]: rightValue,
@@ -266,9 +268,10 @@ function App() {
 
   const resetAllValues = () => {
     setSelectedCheckboxes([]);
-    setDropdownOptions([]);
+    setDropdownOptions({});
     setRadioOptions("");
     setTextFieldValue("");
+    setDropdownMatching({});
   };
 
   const handleOptionChange = (optionIndex: number, value: string) => {
@@ -380,23 +383,23 @@ function App() {
           // Render dropdown component
           <div className="m-[10px]">
             <InputLabel>{question.question}</InputLabel>
-            {question.option.right.map((rightValue: any, index: any) => (
+            {question.option.left.map((leftValue: any, index: any) => (
               <div key={index}>
                 <div className="flex justify-between items-center space-x-4">
-                  <div className="flex-1">{rightValue}</div>
+                  <div className="flex-1">{leftValue}</div>
                   <Select
                     labelId="demo-simple-select-label-right"
                     id={`demo-simple-select-right-${index}`}
                     label="right"
                     className="flex-1"
-                    value={dropdownMatching[rightValue] || ""}
+                    value={dropdownMatching[leftValue] || ""}
                     onChange={(e) =>
-                      handleDropdownMatchingChange(rightValue, e.target.value)
+                      handleDropdownMatchingChange(leftValue, e.target.value)
                     }
                   >
-                    {question.option.left.map((leftValue: any, idx: any) => (
-                      <MenuItem key={idx} value={leftValue}>
-                        {leftValue}
+                    {question.option.right.map((rightValue: any, idx: any) => (
+                      <MenuItem key={idx} value={rightValue}>
+                        {rightValue}
                       </MenuItem>
                     ))}
                   </Select>
